@@ -16,13 +16,12 @@ const addTaskItem = () => {
     if(newTaskItemName.value === '') {
         return
     }
-    taskItems.value.push({ name: newTaskItemName.value, isCompleted: true })
+    taskItems.value.push({ name: newTaskItemName.value, isCompleted: false })
     newTaskItemName.value = ''
 }
 </script>
 
 <template>
-    <div>Task List</div>
     <div>
         <h4>NOT YET</h4>
         <ul>
