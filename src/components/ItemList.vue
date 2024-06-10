@@ -28,7 +28,7 @@ const addTaskItem = () => {
             <template v-for="(taskItem, index) in taskItems" :key="taskItem.name">
                 <li v-if="!taskItem.isCompleted">
                     <div>タスク: {{ taskItem.name }}</div>
-                    <div>ステータス: {{ taskItem.isCompleted }}</div>
+                    <div>ステータス: {{ taskItem.isCompleted ? "completed" : "not yet" }}</div>
                     <label>
                         完了したか？
                         <input v-model="taskItems[index].isCompleted" type="checkbox" />
@@ -43,7 +43,7 @@ const addTaskItem = () => {
             <template v-for="(taskItem, index) in taskItems" :key="taskItem.name">
                 <li v-if="taskItem.isCompleted">
                     <div>タスク: {{ taskItem.name }}</div>
-                    <div>ステータス: {{ taskItem.isCompleted }}</div>
+                    <div>ステータス: {{ taskItem.isCompleted ? "completed" : "not yet" }}</div>
                     <label>
                         完了したか？
                         <input v-model="taskItems[index].isCompleted" type="checkbox" />
